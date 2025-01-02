@@ -4,16 +4,59 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Header from '@/components/header'
 import Footer from '@/components/footer'
-
+import shoppingBag from "@/assets/images/undraw_shopping-bags.svg"
+import onlineShopping from "@/assets/images/Online Shopping Concept.jpg"
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
+      <div className="px-[15px] h-[70vh] grid grid-cols-1 md:grid-cols-2 gap-12 items-center md:mt-0 mt-10">
+          {/* Left Column */}
+          <div className="space-y-6 mx-auto md:text-start text-center">
+            <h1 className="text-5xl  md:text-7xl font-bold">
+              <span className="text-[#FF6B6B]">Happy</span>
+              <br />
+              <span className="text-[#2A9D8F]">Shopping</span>
+            </h1>
+            <p className="text-gray-600 max-w-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </p>
+            <Button 
+              className="bg-[#FF6B6B] hover:bg-coral-red/90  rounded-full px-8"
+            >
+              READ MORE
+            </Button>
+          </div>
+
+          {/* Right Column */}
+          <div className="relative">
+            <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-4">
+              {[...Array(5)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-4 h-4 rounded-full bg-teal-500/10"
+                  style={{
+                    gridColumn: Math.floor(Math.random() * 3) + 1,
+                    gridRow: Math.floor(Math.random() * 3) + 1,
+                  }}
+                />
+              ))}
+            </div>
+            <Image
+              src={shoppingBag}
+              alt="Happy Shopping Illustration"
+              width={600}
+              height={600}
+              priority
+              className="relative z-10"
+            />
+          </div>
+        </div>
         {/* Hero Section */}
         <section className="relative h-[70vh] flex items-center justify-center">
           <Image
-            src="/hero-image.jpg"
+            src={onlineShopping}
             alt="DreamNeed Fashion"
             fill
             className="object-cover"
