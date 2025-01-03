@@ -11,11 +11,12 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-      <div className="px-[15px] h-[70vh] grid grid-cols-1 md:grid-cols-2 gap-12 items-center md:mt-0 mt-10">
+          {/* Hero Section */}
+      <div className="md:max-w-screen-xl mx-auto md:px-0 px-[16px] h-[90vh] grid grid-cols-1 md:grid-cols-2 gap-12 items-center md:mt-0 mt-10">
           {/* Left Column */}
           <div className="space-y-6 mx-auto md:text-start text-center">
             <h1 className="text-5xl  md:text-7xl font-bold">
-              <span className="text-[#FF6B6B]">Happy</span>
+              <span className="text-[#FF6B6B] font-thin">Happy</span>
               <br />
               <span className="text-[#2A9D8F]">Shopping</span>
             </h1>
@@ -53,24 +54,7 @@ export default function Home() {
             />
           </div>
         </div>
-        {/* Hero Section */}
-        <section className="relative h-[70vh] flex items-center justify-center">
-          <Image
-            src={onlineShopping}
-            alt="DreamNeed Fashion"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50" />
-          <div className="relative z-10 text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Welcome to DreamNeed</h1>
-            <p className="text-xl md:text-2xl mb-8">Discover the latest fashion trends in Bangladesh</p>
-            <Button asChild size="lg">
-              <Link href="/shop">Shop Now</Link>
-            </Button>
-          </div>
-        </section>
+      
 
         {/* Featured Products */}
         <section className="py-16 px-4 md:px-8">

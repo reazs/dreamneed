@@ -10,6 +10,12 @@ export default {
   theme: {
   	extend: {
   		colors: {
+			'coral-red': '#FF6B6B',
+			'navy-blue': '#003049',
+			teal: {
+				600: '#2A9D8F',
+				700: '#238276',
+			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
