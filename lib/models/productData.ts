@@ -13,8 +13,8 @@ import { productT } from "@/types";
       colors: ["White", "Golden"],
       materials: ["Cotton", "Silk"],
       images: [
-        "https://example.com/images/jamdani_saree1.jpg",
-        "https://example.com/images/jamdani_saree2.jpg",
+        "/kurta-pajamas.png",
+        "/salwar-kameez.jpg",
       ],
       isFeatured: true,
       isNewArrival: false,
@@ -58,8 +58,9 @@ import { productT } from "@/types";
       colors: ["White"],
       materials: ["Cotton"],
       images: [
-        "https://example.com/images/men_panjabi1.jpg",
-        "https://example.com/images/men_panjabi2.jpg",
+        "/shop-slider-img1.png",
+        "/shop-slider-img2.png",
+        "/shop-slider-img3.png"
       ],
       isFeatured: false,
       isNewArrival: true,
@@ -97,8 +98,8 @@ import { productT } from "@/types";
       colors: ["Pink", "Blue"],
       materials: ["Silk", "Net"],
       images: [
-        "https://example.com/images/kids_lehenga1.jpg",
-        "https://example.com/images/kids_lehenga2.jpg",
+        "/dapper sherwanis.jpg",
+        "/lehengas.jpg",
       ],
       isFeatured: true,
       isNewArrival: true,

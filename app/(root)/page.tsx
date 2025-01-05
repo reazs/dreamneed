@@ -6,8 +6,8 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import shoppingBag from "@/assets/images/undraw_shopping-bags.svg"
 import onlineShopping from "@/assets/images/Online Shopping Concept.jpg"
-import ProductCard from '@/components/shared/ProductsCard'
 import { products } from '@/lib/models/productData'
+import { ProductCard } from '@/components/shared/product-card'
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
