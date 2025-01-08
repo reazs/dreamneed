@@ -33,4 +33,52 @@ export type productT = {
     createdAt: string; // Timestamp of when the product was added
     updatedAt?: string; // Timestamp of the last update (optional)
   };
-  
+  export type AccessoryT = {
+    id: string;
+    name: string;
+    description: string;
+    price: number;
+    discount?: number;
+    category: string; // e.g., "Jewelry", "Bags", "Watches"
+    subCategory?: string; // e.g., "Necklaces", "Earrings", "Bracelets"
+    materials: string[]; // e.g., ["Gold", "Silver", "Leather"]
+    images: string[];
+    isFeatured: boolean;
+    isNewArrival: boolean;
+    isBestSeller: boolean;
+    stock: number;
+    ratings: {
+      average: number;
+      count: number;
+    };
+    reviews: {
+      userId: string;
+      comment: string;
+      rating: number;
+      date: string;
+    }[];
+    tags?: string[]; // e.g., ["Elegant", "Casual", "Gift"]
+    careInstructions?: string;
+    brand?: string;
+    sku?: string;
+    dimensions?: {
+      length: number;
+      width: number;
+      height: number;
+      unit: string; // e.g., "cm", "inches"
+    };
+    weight?: {
+      value: number;
+      unit: string; // e.g., "g", "oz"
+    };
+    adjustable?: boolean; // For items like belts or watch straps
+    compatibility?: string[]; // e.g., ["iPhone 12", "Samsung Galaxy S21"] for phone cases
+    warranty?: string;
+    isCustomizable?: boolean;
+    occasion?: string[]; // e.g., ["Wedding", "Casual", "Business"]
+    style?: string; // e.g., "Modern", "Vintage", "Bohemian"
+    gender?: "Men" | "Women" | "Unisex";
+    ageGroup?: string; // e.g., "Adult", "Teen", "Kids"
+    createdAt: string;
+    updatedAt?: string;
+  };
