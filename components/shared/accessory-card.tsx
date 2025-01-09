@@ -38,10 +38,10 @@ export function AccessoryCard({ accessory }: AccessoryCardProps) {
         <div className="flex justify-between items-start mb-2">
           <h3 className="text-lg font-semibold line-clamp-1">{accessory.name}</h3>
           <div className="flex flex-col items-end">
-            <span className="text-lg font-bold text-primary">৳{accessory.price.toFixed(2)}</span>
+            <span className="text-lg font-bold text-primary">${accessory.price.toFixed(2)}</span>
             {accessory.discount && (
               <span className="text-sm text-muted-foreground line-through">
-                ৳{(accessory.price / (1 - accessory.discount / 100)).toFixed(2)}
+                ${(accessory.price / (1 - accessory.discount / 100)).toFixed(2)}
               </span>
             )}
           </div>

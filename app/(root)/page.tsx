@@ -2,16 +2,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import Header from '@/components/header'
+import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import shoppingBag from "@/assets/images/undraw_shopping-bags.svg"
 import onlineShopping from "@/assets/images/Online Shopping Concept.jpg"
 import { products } from '@/lib/models/productData'
 import { ProductCard } from '@/components/shared/product-card'
+import { accessories } from '@/lib/models/accessoryData'
+import { AccessoryCard } from '@/components/shared/accessory-card'
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
       <main className="flex-grow">
           {/* Hero Section */}
       <div className="md:max-w-screen-xl mx-auto md:px-0 px-[16px] h-[90vh] grid grid-cols-1 md:grid-cols-2 gap-12 items-center md:mt-0 mt-10">
@@ -59,15 +60,23 @@ export default function Home() {
       
 
         {/* Featured Products */}
-        <section className="py-16 px-4 md:px-8">
+        <section className="py-16   max-w-screen-xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Featured Products</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.map((product) => (
               <ProductCard  product={product}/>
             ))}
           </div>
         </section>
-
+        {/* Accessory sections */}
+    <section className=' max-w-screen-xl mx-auto'>
+    <h1 className="text-3xl font-bold mb-8 text-center">Featured Accessories</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {accessories.map((accessory) => (
+          <AccessoryCard key={accessory.id} accessory={accessory} />
+        ))}
+      </div>
+    </section>
         {/* Categories */}
         <section className="py-16 px-4 md:px-8 bg-gray-100">
           <h2 className="text-3xl font-bold text-center mb-8">Shop by Category</h2>
